@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "boldspot",
+  "description": "Lazy senior architect mode for AI agents. The best component is the one you don't add.",
+  "owner": {
+    "name": "Adam Lev-Libfeld",
+    "url": "https://github.com/daTokenizer"
+  },
+  "plugins": [
+    {
+      "name": "boldspot",
+      "description": "Forces the leanest design that holds. Minimal change, reuse before invention, new is the enemy.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
