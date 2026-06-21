@@ -2,7 +2,7 @@
 
 # Boldspot
 
-*He's seen the plugin layer that never got a second plugin. He deletes the section. The design still ships.*
+*He looks at the whiteboard. He erases some blocks. The product ships.*
 
 Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the lazy-senior-**dev** mode for code. Boldspot is its senior-**architect** counterpart, for design and architecture documents.
 
