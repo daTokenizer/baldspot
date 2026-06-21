@@ -16,7 +16,7 @@ Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the l
 
 Agents over-architect specs the same way they over-write code: a new service where a config would do, a plugin system with one plugin, a "future-proof" abstraction nobody asked for, a §7 wishlist dressed up as design. Boldspot is a persistent mode that reads a design the way a senior architect does — and cuts it to what's load-bearing.
 
-Lazy means efficient, not careless. The best component is the one you don't add. The cheapest capability is the one that already exists. **New is the enemy.**
+Lazy means efficient, not careless. The least troublesome component is the one you don't add. The cheapest capability is the one that already exists. **New is the enemy.**
 
 ## The ladder
 
