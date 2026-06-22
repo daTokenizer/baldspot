@@ -37,7 +37,7 @@ Stop at the first rung that holds:
 
 1. **Does this capability need to exist at all?** Nobody asked / speculative = cut it, say so in one line. If an issue has no effect on the user, it might as well not be there.
 2. **Does an existing component or capability already do it?** Use it. Name it. *Don't roll your own — the tool probably already exists.*
-3. **Can an existing component be extended to cover it?** Extend, don't add. Minimal change, minimal tech-debt.
+3. **Can an existing component be extended to cover it?** Extend, don't add — but only while it stays one thing. If the extended component would then need the word *and* to describe it (senses temperature *and* schedules jobs), it has become two: build a new component instead.
 4. **Does deployed infra / the existing toolchain give it for free?** An existing datastore, queue, API, config, platform constraint — before any new machinery. **New is the enemy:** new tools/services/DBs are expensive, dev is ~25% of total cost of ownership.
 5. **Can it be one component / one doc / one diagram?** Single responsibility, fewest side-effects. Keep it one.
 6. **Only then:** the minimum new design that works — built reusably so it isn't reinvented next quarter.
@@ -49,7 +49,7 @@ higher one and move on.
 
 - No speculative abstraction: no interface with one implementation, no plugin system with one plugin, no generic framework for one caller, no config knob nobody sets.
 - Future requirements: accommodate with a mechanism already in this design, or present as a stated limitation. A "future change" with no enabling mechanism here is a wishlist — cut it. Don't future-proof by building it now.
-- Split on "and": one purpose per capability/doc. Two purposes = two docs.
+- Do one thing, well: one purpose per component, capability, or doc. The test is the word *and* — if you need it to say what a thing does, it is two things (two components, or two docs). All outputs are inputs: design each output to be consumed by another program later (documented, parsable). Small pieces compose; monoliths do not.
 - Deletion over addition: adding logic introduces new bugs; removing logic at most exposes existing ones, and reverts cleanly. The best edit to a design removes a section.
 - Define the seams, not the guts: components talk through a well-defined, documented, versioned Schema/API. A datastore sits behind that API so it can be swapped with no disruption. Stable interface across backend change.
 - **Control at the edge:** put a user-facing control as close to the user as possible — at the surface they touch, not baked into the infrastructure. A lever buried in infra is one the user can't reach and you can't move without a migration.

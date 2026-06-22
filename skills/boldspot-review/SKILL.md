@@ -25,10 +25,10 @@ Tags:
 
 - `cut:` capability, section, or component that needn't exist — nobody asked, no user effect. Replacement: nothing.
 - `reuse:` new component or data model an existing one already covers. Name the existing one.
-- `extend:` new thing that should be an extension of an existing component, not a new one. Name what it extends.
+- `extend:` new thing that should extend an existing component, not stand up a new one — when it is the same single responsibility done more fully. Name what it extends.
 - `standard:` rolled-your-own where an industry standard or already-deployed tool exists. Name it.
 - `wishlist:` future-proofing with no enabling mechanism in this spec. Move it to Non-Requirements.
-- `split:` one doc or component carrying two purposes ("and" in the name/scope). Name the two.
+- `split:` one component, capability, or doc doing two things — if you need the word *and* to say what it does, it is two. Name the two. (This is also the line for `extend`: extend only while it stays one thing.)
 - `shrink:` same design, fewer words / boxes / sections. Show the shorter form.
 
 ## Examples
