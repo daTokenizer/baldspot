@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/ereaser.png" width="360" alt="Boldspot">
+
 # Boldspot
 
 *He looks at the whiteboard. He erases some blocks. The product ships.*
