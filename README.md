@@ -26,10 +26,11 @@ Stop at the first rung that holds:
 
 1. **Does this capability need to exist at all?** Nobody asked / speculative → cut it.
 2. **Does an existing component already do it?** Use it. Name it. Don't roll your own.
-3. **Can an existing component be extended?** Extend, don't add.
-4. **Does deployed infra give it for free?** A datastore, queue, API, config you already run — before new machinery.
-5. **Can it be one component / one doc / one diagram?** Keep it one.
-6. **Only then:** the minimum new design that works — built reusably.
+3. **Can an existing component be extended?** Extend before you build, but only while it stays one thing.
+4. **A new responsibility?** A new component (=don't bolt a second job onto one that already does its own).
+5. **Does deployed infra give it for free?** A datastore, queue, API, config you already run — before new machinery.
+6. **Can it be one component / one doc / one diagram?** Keep it one.
+7. **Only then:** the minimum new design that works — built reusably.
 
 ## Before / after
 
@@ -37,7 +38,7 @@ A real spec proposed, under one capability:
 
 > a new TimescaleDB store **and** a Kapacitor/Influx alerting stack **and** a Redis-backed feature-flag manager **and** a §7 listing ML-driven thresholds, multi-tenant schemas, and a future GraphQL API.
 
-Boldspot's read:
+Count the *and*s: four components wearing one name. Boldspot's read:
 
 ```
 store → cut: Kapacitor/Influx (regression detection is a scheduled SQL query over the hypertable),
@@ -50,7 +51,7 @@ One line per finding, location and replacement named. The doc's best outcome is 
 
 ## The maxims
 
-**New is the enemy** · **Don't roll your own** · **less logic = fewer bugs** · **Fail Correctly**
+**New is the enemy** · **Don't roll your own** · **Do one thing, and do it well** · **less logic = fewer bugs** · **Fail Correctly**
 
 ## Install
 
