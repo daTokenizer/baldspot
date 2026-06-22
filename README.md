@@ -9,8 +9,8 @@
 Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the lazy-senior-**dev** mode for code. Boldspot is its senior-**architect** counterpart, for design and architecture documents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-&nbsp;[![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757.svg)](https://claude.com/claude-code)
-&nbsp;[![Stars](https://img.shields.io/github/stars/daTokenizer/boldspot?style=social)](https://github.com/daTokenizer/boldspot/stargazers)
+&nbsp;[![skills.sh](https://skills.sh/b/daTokenizer/boldspot)](https://skills.sh/daTokenizer/boldspot)
+
 
 </div>
 
