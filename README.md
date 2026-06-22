@@ -1,22 +1,21 @@
 <div align="center">
 
-<img src="assets/ereaser.png" width="360" alt="Boldspot">
+<img src="assets/ereaser.png" width="360" alt="Baldspot">
 
-# Boldspot
+# Baldspot
 
 *He looks at the whiteboard. He erases some blocks. The product ships on time.*
 
-Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the lazy-senior-**dev** mode for code. Boldspot is its senior-**architect** counterpart, for design and architecture documents.
+Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the lazy-senior-**dev** mode for code. Baldspot is its senior-**architect** counterpart, for design and architecture documents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-&nbsp;[![skills.sh](https://skills.sh/b/daTokenizer/boldspot)](https://skills.sh/daTokenizer/boldspot)
-
+&nbsp;[![skills.sh](https://skills.sh/b/daTokenizer/baldspot)](https://skills.sh/daTokenizer/baldspot)
 
 </div>
 
 ---
 
-Agents over-architect specs the same way they over-write code: a new service where a config would do, a plugin system with one plugin, a "future-proof" abstraction nobody asked for, a §7 wishlist dressed up as design. Boldspot is a persistent mode that reads a design the way a senior architect does — and cuts it to what's load-bearing.
+Agents over-architect specs the same way they over-write code: a new service where a config would do, a plugin system with one plugin, a "future-proof" abstraction nobody asked for, a §7 wishlist dressed up as design. Baldspot is a persistent mode that reads a design the way a senior architect does — and cuts it to what's load-bearing.
 
 Lazy means efficient, not careless. The least troublesome component is the one you don't add. The cheapest capability is the one that already exists. **New is the enemy.**
 
@@ -38,7 +37,7 @@ A real spec proposed, under one capability:
 
 > a new TimescaleDB store **and** a Kapacitor/Influx alerting stack **and** a Redis-backed feature-flag manager **and** a §7 listing ML-driven thresholds, multi-tenant schemas, and a future GraphQL API.
 
-Count the *and*s: four components wearing one name. Boldspot's read:
+Count the *and*s: four components wearing one name. Baldspot's read:
 
 ```
 store → cut: Kapacitor/Influx (regression detection is a scheduled SQL query over the hypertable),
@@ -58,22 +57,22 @@ One line per finding, location and replacement named. The doc's best outcome is 
 **Claude Code** (plugin):
 
 ```
-/plugin marketplace add daTokenizer/boldspot
-/plugin install boldspot
+/plugin marketplace add daTokenizer/baldspot
+/plugin install baldspot
 ```
 
-**Manual** (any skill-capable agent): copy `skills/boldspot` and `skills/boldspot-review` into `~/.claude/skills/`.
+**Manual** (any skill-capable agent): copy `skills/baldspot` and `skills/baldspot-review` into `~/.claude/skills/`.
 
 ## Modes & commands
 
 | Invoke | What it does |
 |--------|--------------|
-| `boldspot` | Persistent mode. Governs how you write/edit any design doc. `/boldspot lite\|full\|ultra` sets intensity (default **full**). Off with "stop boldspot". |
-| `boldspot-review` | One-shot. Audits an existing spec/PRD/HLD/RFC for over-architecture: one line per finding tagged `cut`/`reuse`/`extend`/`standard`/`wishlist`/`split`/`shrink`. Lists, doesn't apply. |
+| `baldspot` | Persistent mode. Governs how you write/edit any design doc. `/baldspot lite\|full\|ultra` sets intensity (default **full**). Off with "stop baldspot". |
+| `baldspot-review` | One-shot. Audits an existing spec/PRD/HLD/RFC for over-architecture: one line per finding tagged `cut`/`reuse`/`extend`/`standard`/`wishlist`/`split`/`shrink`. Lists, doesn't apply. |
 
 ## When NOT to be lazy
 
-A "simpler" design that drops these is unfinished, not simpler — boldspot never cuts them:
+A "simpler" design that drops these is unfinished, not simpler — baldspot never cuts them:
 
 - **Fail correctly** — kill switches, thresholds, margins; a known failure mode.
 - **Input validation** at trust boundaries — the last line of defence against upstream bugs.
@@ -83,9 +82,9 @@ A "simpler" design that drops these is unfinished, not simpler — boldspot neve
 
 ## The doctrine behind it
 
-Boldspot is the reflex; the manifestos are the why.
+Baldspot is the reflex; the manifestos are the why.
 
-- **[The System Design Manifesto](https://arch.adamlev.com)** — the architecture principles boldspot enforces.
+- **[The System Design Manifesto](https://arch.adamlev.com)** — the architecture principles baldspot enforces.
 - **[The Data Modeling Manifesto](https://data.adamlev.com)** — its data/schema sibling.
 
 ## License

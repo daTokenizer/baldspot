@@ -1,15 +1,15 @@
 ---
-name: boldspot-review
+name: baldspot-review
 description: >
   Design-doc review focused exclusively on over-architecture. Finds what to
   cut, reuse, or simplify in a spec/PRD/HLD/RFC: components that needn't exist,
   new things an existing one already covers, rolled-your-own where a standard
   exists, future-proofing with no mechanism behind it, bloated sections. One
   line per finding: location, what to cut, what replaces it. Use when the user
-  says "boldspot-review", "review this design for over-architecture", "what can
+  says "baldspot-review", "review this design for over-architecture", "what can
   we cut from this spec", "is this over-architected", or invokes
-  /boldspot-review. Complements correctness review, this one only hunts
-  complexity. The companion one-shot to the boldspot persistent mode.
+  /baldspot-review. Complements correctness review, this one only hunts
+  complexity. The companion one-shot to the baldspot persistent mode.
 ---
 
 Review a design doc (spec / PRD / HLD / RFC) for over-architecture. One line
@@ -69,4 +69,4 @@ NEVER flag these as cuttable — they are load-bearing, not bloat:
 - **Anything the user explicitly requested.** If they asked for the fuller design, it stays.
 
 One-shot: lists findings only, applies no fixes. Does not post anything. "stop
-boldspot-review" or "normal mode": revert to verbose review style.
+baldspot-review" or "normal mode": revert to verbose review style.

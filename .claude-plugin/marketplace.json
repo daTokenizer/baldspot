@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "boldspot",
+  "name": "baldspot",
   "description": "Lazy senior architect mode for AI agents. The best component is the one you don't add.",
   "owner": {
     "name": "Adam Lev-Libfeld",
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "boldspot",
+      "name": "baldspot",
       "description": "Forces the leanest design that holds. Minimal change, reuse before invention, new is the enemy.",
       "source": "./",
       "category": "productivity"
