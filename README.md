@@ -27,7 +27,7 @@ Stop at the first rung that holds:
 1. **Does this capability need to exist at all?** Nobody asked / speculative → cut it.
 2. **Does an existing component already do it?** Use it. Name it. Don't roll your own.
 3. **Can an existing component be extended?** Extend before you build, but only while it stays one thing.
-4. **A new responsibility?** A new component (=don't bolt a second job onto one that already does its own).
+4. **A new responsibility?** A new component. Don't bolt a second job onto one that already does its own.
 5. **Does deployed infra give it for free?** A datastore, queue, API, config you already run — before new machinery.
 6. **Can it be one component / one doc / one diagram?** Keep it one.
 7. **Only then:** the minimum new design that works — built reusably.

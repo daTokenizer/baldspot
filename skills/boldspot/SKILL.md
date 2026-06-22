@@ -38,7 +38,7 @@ Stop at the first rung that holds:
 1. **Does this capability need to exist at all?** Nobody asked / speculative = cut it, say so in one line. If an issue has no effect on the user, it might as well not be there.
 2. **Does an existing component or capability already do it?** Use it. Name it. *Don't roll your own — the tool probably already exists.*
 3. **Can an existing component be extended to cover it?** Extend before you build, but only while it stays one thing.
-4. **A new responsibility?** A new component (=don't bolt a second job onto one that already does its own).
+4. **A new responsibility?** A new component. Don't bolt a second job onto one that already does its own.
 5. **Does deployed infra / the existing toolchain give it for free?** An existing datastore, queue, API, config, platform constraint — before any new machinery. **New is the enemy:** new tools/services/DBs are expensive, dev is ~25% of total cost of ownership.
 6. **Can it be one component / one doc / one diagram?** Single responsibility, fewest side-effects. Keep it one.
 7. **Only then:** the minimum new design that works — built reusably so it isn't reinvented next quarter.
