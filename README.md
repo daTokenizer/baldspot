@@ -4,7 +4,7 @@
 
 # Boldspot
 
-*He looks at the whiteboard. He erases some blocks. The product ships.*
+*He looks at the whiteboard. He erases some blocks. The product ships on time.*
 
 Inspired by **[ponytail](https://github.com/DietrichGebert/ponytail)** — the lazy-senior-**dev** mode for code. Boldspot is its senior-**architect** counterpart, for design and architecture documents.
 
