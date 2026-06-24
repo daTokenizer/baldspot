@@ -54,6 +54,11 @@ One line per finding, location and replacement named. The doc's best outcome is 
 
 ## Install
 
+**Global** (via npm/npx/bun):
+```
+npx skills add https://github.com/daTokenizer/baldspot
+```
+
 **Claude Code** (plugin):
 
 ```
@@ -89,4 +94,4 @@ Baldspot is the reflex; the manifestos are the why.
 
 ## License
 
-MIT. The shortest license that works.
+[MIT](LICENSE). The shortest license that works.
