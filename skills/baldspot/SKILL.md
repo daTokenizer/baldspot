@@ -52,7 +52,7 @@ higher one and move on.
 - Future requirements: accommodate with a mechanism already in this design, or present as a stated limitation. A "future change" with no enabling mechanism here is a wishlist — cut it. Don't future-proof by building it now.
 - Do one thing, well: one purpose per component, capability, or doc. The test is the word *and* — if you need it to say what a thing does, it is two things (two components, or two docs). All outputs are inputs: design each output to be consumed by another program later (documented, parsable). Small pieces compose; monoliths do not.
 - Deletion over addition: adding logic introduces new bugs; removing logic at most exposes existing ones, and reverts cleanly. The best edit to a design removes a section.
-- Define the seams, not the guts: components talk through a well-defined, documented, versioned Schema/API. A datastore sits behind that API so it can be swapped with no disruption. Stable interface across backend change.
+- Define the seams, not the guts: components talk through a well-defined, documented, versioned Schema/API. A datastore sits behind that API so it can be swapped with no disruption. Stable interface across backend change. Score every new seam on Rusty's API scale (below); a seam under `+4` gets redesigned, not shipped.
 - **Control at the edge:** put a user-facing control as close to the user as possible — at the surface they touch, not baked into the infrastructure. A lever buried in infra is one the user can't reach and you can't move without a migration.
 - **Model data from the user's need, not your implementation** (Form Follows Function): reuse and extend existing models, names, and tags before minting new ones — every new model is span the whole company maintains. Use meaningful types in the ubiquitous language (`Count` over `Integer` over `Number`, `UUID` over `ID` over `String`). Never a free-text `String` that sources fill with unmodelled JSON — that is a rogue model dodging review. Names and values stay stable across whatever transports them. Version for change, required fields never change.
 - Storage is cheap, compute is expensive: persist partial results and aggregations so they are reused, not recomputed — and separate aggregation from analysis so one stored result serves many future uses.
@@ -61,6 +61,23 @@ higher one and move on.
 - One-level-up altitude: describe the change at its own scope and its effect on neighbors (callers, downstream, sibling components). Skip implementation guts unless load-bearing. Too deep and it isn't architecture; too high and the team can't build it.
 - Boil down: one sentence over a paragraph, a bullet over a section, a code example over prose, one diagram over a wall of boxes.
 - Mark deliberate scope cuts as intent, not omission: a `> baldspot:` callout names what was cut and the trigger to add it — `> baldspot: single-node only; add cluster coordination when a second node ships`. A reviewer reads the gap as a decision, not an oversight.
+
+## API scoring (Rusty's scale)
+
+Any new API, interface, or public function signature in the design gets a Rusty Russell score: `-10` (impossible to get right) to `10` (impossible to get wrong). State the target score in one line. Don't ship below `+4` ("follow convention and you'll get it right"). Source: [positive levels](http://ozlabs.org/~rusty/index.cgi/tech/2008-03-30.html), [negative levels](http://ozlabs.org/~rusty/index.cgi/tech/2008-04-01.html).
+
+| + | Right | − | Wrong |
+|---|-------|---|-------|
+| 10 | Impossible to get wrong | -10 | Impossible to get right |
+| 9 | Compiler/linker won't let you get it wrong | -9 | Compiler/linker won't let you get it right |
+| 8 | Compiler warns if wrong | -8 | Compiler warns if right |
+| 7 | Obvious use is (probably) correct | -7 | Obvious use is wrong |
+| 6 | Name tells you how to use it | -6 | Name tells you how not to use it |
+| 5 | Do it right or it always breaks at runtime | -5 | Do it right and it sometimes breaks at runtime |
+| 4 | Follow convention and you'll get it right | -4 | Follow convention and you'll get it wrong |
+| 3 | Read docs, get it right | -3 | Read docs, get it wrong |
+| 2 | Read implementation, get it right | -2 | Read implementation, get it wrong |
+| 1 | Read the correct thread, get it right | -1 | Read the thread, get it wrong |
 
 ## Output
 
